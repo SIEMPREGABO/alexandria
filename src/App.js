@@ -1,10 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import SM from './pages/SM';
-import SS from './pages/SS';
-import Contrato from './pages/Contrato';
+import AppRoutes from './routes/routes';
 
 function App() {
   return (
@@ -27,12 +24,7 @@ function App() {
           </ul>
         </nav>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sm" element={<SM />} />
-          <Route path="/ss" element={<SS />} />
-          <Route path="/contrato" element={<Contrato />} />
-        </Routes>
+        <AppRoutes />
       </div>
     </Router>
   );
