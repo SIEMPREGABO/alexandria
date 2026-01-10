@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import SM from './SM';
-import SS from './SS';
-import Contrato from './Contrato';
+import Home from './pages/Home';
+import SM from './pages/SM';
+import SS from './pages/SS';
+import Contrato from './pages/Contrato';
 
 function App() {
   return (
