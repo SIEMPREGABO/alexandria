@@ -2,7 +2,7 @@ import React from 'react';
 
 function SS() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='container-custom'>
       <h1>SS</h1>
       <p>Welcome to the SS page</p>
     </div>

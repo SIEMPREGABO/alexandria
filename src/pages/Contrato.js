@@ -2,7 +2,7 @@ import React from 'react';
 
 function Contrato() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='container-custom'>
       <h1>Contrato</h1>
       <p>Welcome to the Contrato page</p>
     </div>
