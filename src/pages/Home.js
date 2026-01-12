@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/Home.css';
 
 function Home() {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -29,56 +30,18 @@ function Home() {
 
   return (
     <div className='container-custom'>
-      <div style={{
-        display: 'flex',
-        minHeight: '100vh',
-        fontFamily: 'Poppins, sans-serif'
-      }}>
+      <div className="home-container">
         {/* Lado izquierdo - Mensaje de bienvenida */}
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '60px',
-          backgroundColor: 'var(--light)',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
+        <div className="home-left-side">
           {/* Mensaje de bienvenida */}
-          <div style={{
-            textAlign: 'center',
-            maxWidth: '600px',
-            opacity: hoveredItem ? 0 : 1,
-            transition: 'opacity 0.5s ease',
-            position: 'absolute',
-            zIndex: hoveredItem ? 1 : 10
-          }}>
-            <h1 style={{
-              fontSize: '48px',
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 800,
-              marginBottom: '30px',
-              color: 'var(--dark)',
-              lineHeight: '1.1'
-            }}>
+          <div className={`home-welcome-message ${hoveredItem ? 'hidden' : ''}`}>
+            <h1 className="home-welcome-title">
               Bienvenido a <br />
-              <span style={{
-                background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}>
+              <span className="home-welcome-title-gradient">
                 Boss Babel Lab
               </span>
             </h1>
-            <p style={{
-              fontSize: '20px',
-              color: 'var(--gray)',
-              lineHeight: '1.6',
-              fontWeight: '700',
-              marginBottom: '30px'
-            }}>
+            <p className="home-welcome-description">
               Especialistas en branding y marketing digital para empresarios que buscan dejar huella en el mundo digital.
             </p>
             {/* <button style={{
@@ -99,19 +62,7 @@ function Home() {
 
           {/* Slide de imágenes */}
           {hoveredItem && (
-            <div style={{
-              position: 'absolute',
-              right: hoveredItem ? '0' : '-100%',
-              top: 0,
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'right 2s cubic-bezier(0.175, 0.885, 0.32, 1.1)',
-              backgroundColor: 'var(--light-low)',
-              zIndex: 5
-            }}>
+            <div className="home-image-slide visible">
               {/* <div style={{
                 textAlign: 'center',
                 padding: '40px'
@@ -154,36 +105,14 @@ function Home() {
         </div>
 
         {/* Lado derecho - Menú */}
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'var(--dark)',
-          color: 'white'
-        }}>
-          <ul style={{
-            listStyle: 'none',
-            display: 'flex',
-            flexDirection: 'column',
-            textAlign: 'center'
-          }}>
+        <div className="home-right-side">
+          <ul className="home-menu-list">
             <li>
 
 
               <Link
                 to="/sm"
-                style={{
-                  textDecoration: 'none',
-                  fontSize: '48px',
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 800,
-                  marginBottom: '60px',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  transform: hoveredItem === 'Marketing' ? 'scale(1.1)' : 'scale(1)',
-                  color: hoveredItem === 'Marketing' ? 'var(--primary)' : 'white'
-                }}
+                className={`home-menu-link ${hoveredItem === 'Marketing' ? 'hovered' : ''}`}
                 onMouseEnter={() => setHoveredItem('Marketing')}
                 onMouseLeave={() => setHoveredItem(null)}
               >
@@ -194,16 +123,7 @@ function Home() {
             <li>
 
               <Link
-                style={{
-                  fontSize: '48px',
-                  textDecoration: 'none',
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 800,
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  transform: hoveredItem === 'Sistemas' ? 'scale(1.1)' : 'scale(1)',
-                  color: hoveredItem === 'Sistemas' ? 'var(--primary)' : 'white'
-                }}
+                className={`home-menu-link ${hoveredItem === 'Sistemas' ? 'hovered' : ''}`}
                 onMouseEnter={() => setHoveredItem('Sistemas')}
                 onMouseLeave={() => setHoveredItem(null)}
               >
