@@ -79,7 +79,7 @@ const SS = () => {
               <h4>Incluye:</h4>
               <ul>
                 {plan.destacado.map((item, i) => (
-                  <li key={i}>✓ {item}</li>
+                  <li key={i}>{item}</li>
                 ))}
               </ul>
             </div>
