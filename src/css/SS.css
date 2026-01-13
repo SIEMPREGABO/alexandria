@@ -1,0 +1,393 @@
+/* Consultoría Planes - SS Page Styles */
+
+.consultoria-planes {
+  min-height: 100vh;
+  background-color: var(--light);
+  padding: 60px 20px;
+}
+
+/* Header Section */
+.planes-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+}
+
+.planes-header h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.planes-header .subtitle {
+  font-size: 20px;
+  color: var(--primary);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Planes Container */
+.planes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+/* Plan Card */
+.plan-card {
+  background: var(--light);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary);
+}
+
+.plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 20px 20px 0 0;
+}
+
+/* Plan Header */
+.plan-header {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.plan-header h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.plan-desc {
+  font-size: 16px;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+/* Plan Precio */
+.plan-precio {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--light-low), var(--light));
+  border-radius: 15px;
+}
+
+.plan-precio .precio {
+  display: block;
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--secondary);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
+
+.plan-precio .desde {
+  font-size: 14px;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Plan Destacado */
+.plan-destacado {
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.plan-destacado h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.plan-destacado ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-destacado ul li {
+  padding: 12px 0;
+  color: var(--dark);
+  font-size: 15px;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding-left: 30px;
+}
+
+.plan-destacado ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Plan Ideal */
+.plan-ideal {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 2px solid var(--accent);
+}
+
+.plan-ideal p {
+  font-size: 14px;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.plan-ideal strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Información Importante */
+.informacion-importante {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, var(--light-low), var(--light));
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  border-left: 5px solid var(--primary);
+}
+
+.info-card h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Contacto Form */
+.contacto-form {
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contacto-form h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contacto-form > p {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.contacto-form form {
+  background: var(--light);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px var(--shadow-light);
+  text-align: left;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--button-hover);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray);
+  opacity: 0.6;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px 40px;
+  background: var(--button);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 10px 20px var(--button-hover);
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px var(--button-hover);
+  background: var(--primary);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .planes-header h1 {
+    font-size: 40px;
+  }
+  
+  .planes-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .consultoria-planes {
+    padding: 40px 15px;
+  }
+
+  .planes-header h1 {
+    font-size: 36px;
+  }
+
+  .planes-header .subtitle {
+    font-size: 18px;
+  }
+
+  .planes-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  .plan-card {
+    padding: 30px 25px;
+  }
+
+  .plan-precio .precio {
+    font-size: 36px;
+  }
+
+  .info-card {
+    padding: 40px 30px;
+  }
+
+  .contacto-form h2 {
+    font-size: 32px;
+  }
+
+  .contacto-form form {
+    padding: 35px 25px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .planes-header h1 {
+    font-size: 30px;
+  }
+
+  .plan-header h3 {
+    font-size: 24px;
+  }
+
+  .plan-precio .precio {
+    font-size: 32px;
+  }
+
+  .info-card h3 {
+    font-size: 24px;
+  }
+
+  .contacto-form h2 {
+    font-size: 28px;
+  }
+
+  .contacto-form form {
+    padding: 30px 20px;
+  }
+}
