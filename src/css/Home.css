@@ -101,7 +101,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     transform: scale(1);
-    color: white;
+    color: var(--light);
 }
 
 .home-menu-link.hovered {

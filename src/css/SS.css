@@ -3,14 +3,15 @@
 .consultoria-planes {
   min-height: 100vh;
   background-color: var(--light);
-  padding: 60px 20px;
+  padding: 20px;
 }
 
 /* Header Section */
 .planes-header {
   text-align: center;
   margin-bottom: 60px;
-  padding: 40px 20px;
+  padding: 20px;
+  position: relative;
 }
 
 .planes-header h1 {
@@ -119,7 +120,7 @@
   border-color: var(--primary);
 }
 
-.plan-card::before {
+/* .plan-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -128,7 +129,7 @@
   height: 5px;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   border-radius: 20px 20px 0 0;
-}
+} */
 
 /* Plan Header */
 .plan-header {
@@ -162,7 +163,7 @@
 
 .plan-precio .precio {
   display: block;
-  font-size: 42px;
+  font-size: 34px;
   font-weight: 900;
   color: var(--secondary);
   font-family: 'Montserrat', sans-serif;
@@ -235,7 +236,8 @@
 /* Información Importante */
 .informacion-importante {
   max-width: 1200px;
-  margin: 80px auto;
+  /* margin: 80px auto; */
+  margin-inline: auto;
   padding: 0 20px;
 }
 
@@ -256,6 +258,8 @@
 }
 
 .info-card p {
+  margin-inline: auto;
+  text-align: center;
   font-size: 16px;
   color: var(--dark);
   line-height: 1.8;
@@ -364,8 +368,8 @@
 
 .submit-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px var(--button-hover);
-  background: var(--primary);
+  /* box-shadow: 0 15px 30px var(--button-hover);
+  background: var(--primary); */
 }
 
 .submit-btn:active {
