@@ -62,6 +62,20 @@ const SS = () => {
         <p className="subtitle">Elige la mejor opción para tu empresa. Puedes cambiar de plan en cualquier momento.</p>
       </header>
 
+      <div className="presentacion-paquetes">
+        <div className="presentacion-content">
+          <h2 className="presentacion-slogan">
+            Tu negocio visible 24/7, alcanzando clientes mientras duermes
+          </h2>
+          <p className="presentacion-descripcion">
+            En el mundo digital de hoy, tener presencia en internet no es un lujo, es una necesidad. 
+            Con nuestros paquetes, tu negocio estará disponible las 24 horas del día, los 7 días de la semana, 
+            conectando con clientes potenciales en cualquier momento y desde cualquier lugar. 
+            Mientras tu competencia cierra sus puertas, tu negocio sigue generando oportunidades.
+          </p>
+        </div>
+      </div>
+
       <div className="planes-container">
         {planes.map((plan, index) => (
           <div key={index} className="plan-card">
